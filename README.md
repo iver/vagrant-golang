@@ -11,15 +11,15 @@ Simple golang development environment for Vagrant.
 
 ## <a name="require">Requirements</a>
 
-1. You must have installed (Vagrant)[http://www.vagrantup.com/downloads.html]
-2. And (VirtualBox)[https://www.virtualbox.org/wiki/Downloads]
+1. You must have installed [Vagrant](http://www.vagrantup.com/downloads.html)
+2. And [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 ## <a name="quickstart"></a>Quickstart
 
 First at all clone our vagrant repository:
 
 ``` bash
-$> git clone https://github.com/ivan-iver/vagrant_golang.git golang
+$ git clone https://github.com/ivan-iver/vagrant_golang.git golang
 ```
 
 After that you can run your vagrant machine:
