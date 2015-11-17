@@ -8,6 +8,7 @@ This project aims to facilitate the use of ``golang`` avoiding Operative System 
 
 **Tools on the box**
 
+* [Ubuntu 14.04.3 LTS](http://releases.ubuntu.com/14.04/)
 * [Golang 1.5.1](https://golang.org/dl/)
 * [Vagrant](https://www.vagrantup.com/)
 * [My dot files configuration](https://github.com/ivan-iver/config)
