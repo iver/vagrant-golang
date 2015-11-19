@@ -2,8 +2,7 @@
 
 export GOPACK=go1.5.1.linux-amd64.tar.gz
 mkdir -p /home/vagrant/golang
-#wget -O -nv --progress=dot:giga /home/vagrant/golang/${GOPACK} https://storage.googleapis.com/golang/${GOPACK}
-#mkdir -p /usr/local/go
+wget -nv --progress=dot:giga -O /home/vagrant/golang/${GOPACK} https://storage.googleapis.com/golang/${GOPACK}
 tar zxf /home/vagrant/golang/${GOPACK} -C /usr/local/
 
 source ~/.bash_profile
