@@ -11,7 +11,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "golangmx"
   config.vm.hostname = "gophers"
   config.vm.network "private_network", ip: "10.2.2.205"
-  config.vm.provision :shell, path: "bin/setup.sh"
+  config.vm.provision :shell do |shell|
+    shell.path = "bin/setup.sh"
+    shell.privileged = true
+  end
+  config.vm.provision :shell do |shell|
+    shell.path = "bin/golang.sh"
+    shell.privileged = false
+  end
 
   config.ssh.forward_agent = true
   config.vm.box_check_update = true
