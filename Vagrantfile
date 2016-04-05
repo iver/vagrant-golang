@@ -6,7 +6,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box_url = "https://github.com/ivan-iver/vagrant_golang/releases/download/v0.1.2/golang.box"
+  config.vm.box_url = "https://github.com/ivan-iver/vagrant_golang/releases/download/v0.1.2/golangmx.box"
   config.vm.box = "golangmx"
   config.vm.hostname = "gophers"
   config.vm.network "private_network", ip: "10.2.2.205"
