@@ -9,13 +9,13 @@ This project aims to facilitate the use of ``golang`` avoiding Operative System 
 **Tools on the box**
 
 * [Ubuntu 14.04.3 LTS](http://releases.ubuntu.com/14.04/)
-* [Golang 1.5.1](https://golang.org/dl/)
+* [Golang 1.9](https://golang.org/dl/)
 * [Vagrant](https://www.vagrantup.com/)
-* [My dot files configuration](https://github.com/ivan-iver/config)
+* [My dot files configuration](https://github.com/iver/config)
 
 **About tools**
 
-> **Go**, also commonly referred to as golang, is a programming language developed at Google in 2007 by [Robert Griesemer](https://en.wikipedia.org/wiki/Robert_Griesemer), [Rob Pike](https://en.wikipedia.org/wiki/Rob_Pike), and [Ken Thompson](https://en.wikipedia.org/wiki/Ken_Thompson). Designed primarily for systems programming, it is a compiled, statically typed language in the tradition of C and C++, with garbage collection, various safety features and [CSP](https://en.wikipedia.org/wiki/Communicating_sequential_processes)-style [concurrent programming](https://en.wikipedia.org/wiki/Concurrent_programming) features added.
+> **Go**, also commonly referred to as golang, is a programming language developed at Google in 2007 by [Robert Griesemer](https://www.computerhope.com/people/robert_griesemer.htm), [Rob Pike](https://en.wikipedia.org/wiki/Rob_Pike), and [Ken Thompson](https://en.wikipedia.org/wiki/Ken_Thompson). Designed primarily for systems programming, it is a compiled, statically typed language in the tradition of C and C++, with garbage collection, various safety features and [CSP](https://en.wikipedia.org/wiki/Communicating_sequential_processes)-style [concurrent programming](https://en.wikipedia.org/wiki/Concurrent_programming) features added.
 
 
 
@@ -52,7 +52,7 @@ This project aims to facilitate the use of ``golang`` avoiding Operative System 
 First at all clone our vagrant repository:
 
 ``` bash
-$ git clone https://github.com/ivan-iver/vagrant_golang.git golang
+$ git clone https://github.com/iver/vagrant_golang.git golang
 ```
 
 After that you can run your vagrant machine:
@@ -78,5 +78,7 @@ Feedback is more than welcome; I probably got some things wrong so please tell m
 
 
 [Vagrant]: http://www.vagrantup.com/
-[Vagrantfile]: https://github.com/ivan-iver/vagrant_golang/blob/master/Vagrantfile
+[Vagrantfile]: https://github.com/iver/vagrant_golang/blob/master/Vagrantfile
 [ConfigOptions]: http://docs.vagrantup.com/v2/vagrantfile/
+
+Blvd. Miguel de Cervantes Saavedra 169, 

@@ -6,15 +6,14 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box_url = "https://github.com/ivan-iver/vagrant_golang/releases/download/v0.1.2/golangmx.box"
-  config.vm.box = "golangmx"
+  config.vm.box = "ubuntu/xenial32"
   config.vm.hostname = "gophers"
   config.vm.network "private_network", ip: "10.2.2.205"
   config.vm.network :forwarded_port, guest: 22, host: 1234
-  config.vm.provision :shell do |shell|
-    shell.path = "bin/setup.sh"
-    shell.privileged = true
-  end
+#  config.vm.provision :shell do |shell|
+#    shell.path = "bin/setup.sh"
+#    shell.privileged = true
+#  end
   config.vm.provision :shell do |shell|
     shell.path = "bin/golang.sh"
     shell.privileged = false
@@ -24,6 +23,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_check_update = true
 
   config.vm.provider "virtualbox" do |vb|
+    vb.name = 'golangbox'
     vb.customize ["modifyvm", :id, "--accelerate3d", "off"]
     vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 10000 ]
     vb.memory = 1024

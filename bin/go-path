@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Define golang paths
+# --
+# (c) Iver!
+# Iván Jaimes <iver@iver.mx>
+#
+
+# Config file to go
+
+# input mode
+umask 0007
+
+config () {
+  [ -d /usr/local/go ] && export GOROOT=/usr/local/go
+  [ -d ${HOME}/go ] && export GOPATH=${HOME}/go
+  [ -d ${GOPATH}/bin ] && export GOBIN=${GOPATH}/bin
+  [ -d ${GOROOT}/bin ] && export LPATH=${GOROOT}/bin
+  PATH=${PATH}:${LPATH}:${GOBIN}
+}
+
+config
+
