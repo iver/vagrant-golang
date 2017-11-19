@@ -10,7 +10,6 @@ export ORIGIN=https://storage.googleapis.com/golang/${GOPACK}
 echo "Creating golang home ... ${TARGET_PACK}";
 mkdir -p ${TARGET_PACK}
 
-
 echo "Downloading golang pack from ${ORIGIN}";
 [ -f ${TARGET_PACK}/${GOPACK} ] || wget -nv --progress=dot:giga -O ${TARGET_PACK}/${GOPACK} ${ORIGIN}
 
@@ -18,9 +17,13 @@ echo "Install golang binaries ... target: /usr/local";
 sudo tar zxf ${TARGET_PACK}/${GOPACK} -C /usr/local/
 sudo chown -R ${USER} ${TARGET_GO};
 
-source ~/.bash_profile
-
-exit 0;
+echo "Clonning configuration repository ..."
+[ -d ~/Config ] || git clone https://github.com/iver/Baubles.git ~/Config --branch debian;
+cd ~/Config;
+echo "Installing configuration files ..."
+chmod +x install.sh;
+./install.sh;
+echo "Configuration repository was cloned!"
 
 # ${TARGET_GO}/bin/go get -u -v github.com/nsf/gocode
 # OR mdempsky/gocode for better performance
