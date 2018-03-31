@@ -39,6 +39,7 @@ This project aims to facilitate the use of ``golang`` avoiding Operative System 
 
 - [Requirements](#require)
 - [Quickstart](#quickstart)
+- [Entry on /etc/hosts](#entry)
 - [License](#license)
 
 
@@ -66,6 +67,29 @@ Then the box will be downloaded for you.
 
 If you wish, you can learn more about it alter a [vagrant file](Vagrantfile) and its [configuration options](ConfigOptions).
 
+## <a name="entry"></a>Entry on /etc/hosts
+
+How to add an entry to your /etc/hosts file on the host system.
+
+You can use the [vagrant pluging hostupdater](Hostupdater):
+
+**You can install it with:**
+
+```
+$ vagrant plugin install vagrant-hostsupdater
+```
+
+You currently only need the hostname and a :private_network network with a fixed IP address.
+
+```
+  config.vm.network "private_network", ip: "10.2.2.205"
+  config.hostsupdater.aliases = ["vm.iver.mx", "gophers.iver.mx"]
+```
+
+This IP address and the hostname will be used for the entry in the /etc/hosts file.
+
+More information about it on [vagrant-hostupdater page](Hostupdater.)
+
 ## <a name="license"></a>Copyright and license
 
 ***
@@ -80,5 +104,4 @@ Feedback is more than welcome; I probably got some things wrong so please tell m
 [Vagrant]: http://www.vagrantup.com/
 [Vagrantfile]: https://github.com/iver/vagrant_golang/blob/master/Vagrantfile
 [ConfigOptions]: http://docs.vagrantup.com/v2/vagrantfile/
-
-Blvd. Miguel de Cervantes Saavedra 169, 
+[Hostupdater]: https://github.com/cogitatio/vagrant-hostsupdater
