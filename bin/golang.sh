@@ -2,7 +2,8 @@
 set -o errexit
 set -o nounset
 
-export GOPACK=go1.9.linux-amd64.tar.gz
+# export GOPACK=go1.9.linux-amd64.tar.gz
+export GOPACK=go1.9.5.linux-386.tar.gz
 export TARGET_PACK=${HOME/golang}
 export TARGET_GO=/usr/local/go
 export ORIGIN=https://storage.googleapis.com/golang/${GOPACK}
